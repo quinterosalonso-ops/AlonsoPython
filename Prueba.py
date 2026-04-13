@@ -2,9 +2,13 @@ print("ola")
 
 #Creando Variables
 
-titulo="Clima de hoy"
-diaDelMes=13
-mes=4
+titulo="Clima de hoy" #String
+diaDelMes=13 #Int
+mes=4 #Int
 
-temperature=22.3
-llueve=False
+temperature=22.3 #Float
+llueve=False #Bolean
+
+print(titulo)
+print("Temperatura actual:", temperature, "grados")
+print(diaDelMes, "-", mes)
