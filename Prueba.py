@@ -12,3 +12,8 @@ llueve=False #Bolean
 print(titulo)
 print("Temperatura actual:", temperature, "grados")
 print(diaDelMes, "-", mes)
+
+if llueve:
+    ("Ta lloviendo, lleva paraguas")
+else:
+    ("No ta lloviendo, lleva parasol")
