@@ -14,6 +14,6 @@ print("Temperatura actual:", temperature, "grados")
 print(diaDelMes, "-", mes)
 
 if llueve:
-    ("Ta lloviendo, lleva paraguas")
+    print("Ta lloviendo, lleva paraguas")
 else:
-    ("No ta lloviendo, lleva parasol")
+    print("No ta lloviendo, lleva parasol")
