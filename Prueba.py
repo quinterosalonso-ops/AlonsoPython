@@ -1,4 +1,4 @@
 i=0
-while i <= 1000:
+while i == i:
     i = 1+i
     print(i)
