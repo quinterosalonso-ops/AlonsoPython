@@ -33,30 +33,66 @@
 # else:
 #     print("Ingreso incorrecto")
 
-print("Calculadora de puntaje de credito")
-_uingresos=int(input("Ingresar Cantidad de ingresos: "))
-_ueducacion=input("Ingresar Nivel Educacional: basico/medio/superior ")
-_unacionalidad=input("Ingresar Nacionalidad: chilena/extranjera ")
+# print("Calculadora de puntaje de credito")
+# _uingresos=int(input("Ingresar Cantidad de ingresos: "))
+# _ueducacion=input("Ingresar Nivel Educacional: basico/medio/superior ")
+# _unacionalidad=input("Ingresar Nacionalidad: chilena/extranjera ")
 
-_nacionalidad=0
-if _unacionalidad == "chilena":
-    _nacionalidad=300000
+# _nacionalidad=0
+# if _unacionalidad == "chilena":
+#     _nacionalidad=300000
 
-_educacion=1
-if _ueducacion == "medio":
-    _educacion=1.3
-if _ueducacion == "superior":
-    _educacion=1.5
+# _educacion=1
+# if _ueducacion == "medio":
+#     _educacion=1.3
+# if _ueducacion == "superior":
+#     _educacion=1.5
 
-_ingresos=0
-if _uingresos >= 1500001:
-    _ingresos=1000000
-elif _uingresos <= 1500000 and _uingresos > 1000000:
-    _ingresos=650000
-elif _uingresos <= 1000000 and _uingresos >= 500000:
-    _ingresos=300000
+# _ingresos=0
+# if _uingresos >= 1500001:
+#     _ingresos=1000000
+# elif _uingresos <= 1500000 and _uingresos > 1000000:
+#     _ingresos=650000
+# elif _uingresos <= 1000000 and _uingresos >= 500000:
+#     _ingresos=300000
 
-print("Su puntaje de credito es de: ",(_ingresos*_educacion)+_nacionalidad)
+# print("Su puntaje de credito es de: ",(_ingresos*_educacion)+_nacionalidad)
     
+#ejemplo y explicacion de match
 
+# Precios
+prod1 = 70000
+prod2 = 500000
+prod3 = 580000
+iva= 1.19
+op=0
+Total=0
+while op !=4:
+    print(f"1. Radio estereo Sony ${prod1}")
+    print(f"""2. LGTV 55" Super gamer ${prod2} """)
+    print(f"3. PS5 ${prod3}")
+    print(f"4. Salir")
+    print("Seleccione una opcion")
+    op=int(input())
+    match op:
+        case 1:
+            print(f"El valor del producto con iva incluido es de ${prod1*iva}")
+            Total+=prod1
+        case 2:
+            print(f"El valor del producto con iva incluido es de ${prod2*iva}")
+            Total+=prod2
+        case 3:
+            print(f"El valor del producto con iva incluido es de ${prod3*iva}")
+            Total+=prod3
+        case 4:
+            print("Saliendo del sistema")
+        case _:
+            print("Opcion invalida")
+    print(f"su total es de {Total}")
+
+# cont=1
+# num=9
+# while cont<=num:
+#     print(f"{cont} x {num} = {cont*num}")
+#     cont+=1
 
