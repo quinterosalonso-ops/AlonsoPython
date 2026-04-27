@@ -138,5 +138,3 @@ while op!=5:
         case _:
             print("opcion invalida")
     
-
-    
