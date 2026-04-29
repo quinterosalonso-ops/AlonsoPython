@@ -96,45 +96,121 @@
 #     print(f"{cont} x {num} = {cont*num}")
 #     cont+=1
 
-var1=0
-var2=0
-op=int(input('''Ingrse una operacion
-            1.- Suma
-            2.- Resta
-            3.- Multiplicacion
-            4.- Sivision
-            5.- Salir
-            '''))
+# var1=0
+# var2=0
+# op=int(input('''Ingrse una operacion
+#             1.- Suma
+#             2.- Resta
+#             3.- Multiplicacion
+#             4.- Sivision
+#             5.- Salir
+#             '''))
 
-def PedirNum():
-    global var1
-    global var2
-    var1=int(input("ingresar primer numero de la operacion"))
-    var2=int(input("ingresar segundo numero de la operacion"))
+# def PedirNum():
+#     global var1
+#     global var2
+#     var1=int(input("ingresar primer numero de la operacion"))
+#     var2=int(input("ingresar segundo numero de la operacion"))
 
-while op!=5:
-    op=int(input('''Ingrse una operacion
-            1.- Suma
-            2.- Resta
-            3.- Multiplicacion
-            4.- Sivision
-            5.- Salir
-            '''))
-    match op:
-        case 1:
-            PedirNum()
-            print("el resultado de la operacion es", var1+var2)
-        case 2:
-            PedirNum()
-            print("el resultado de la operacion es", var1-var2)
-        case 3:
-            PedirNum()
-            print("el resultado de la operacion es", var1*var2)
-        case 4:
-            PedirNum()
-            print("el resultado de la operacion es", var1/var2)
-        case 5:
-            print("Saliendo del sistema")
-        case _:
-            print("opcion invalida")
+# while op!=5:
+#     op=int(input('''Ingrse una operacion
+#             1.- Suma
+#             2.- Resta
+#             3.- Multiplicacion
+#             4.- Sivision
+#             5.- Salir
+#             '''))
+#     match op:
+#         case 1:
+#             PedirNum()
+#             print("el resultado de la operacion es", var1+var2)
+#         case 2:
+#             PedirNum()
+#             print("el resultado de la operacion es", var1-var2)
+#         case 3:
+#             PedirNum()
+#             print("el resultado de la operacion es", var1*var2)
+#         case 4:
+#             PedirNum()
+#             print("el resultado de la operacion es", var1/var2)
+#         case 5:
+#             print("Saliendo del sistema")
+#         case _:
+#             print("opcion invalida")
+
+# op=0
+# cantPersonas=0
+# total=0
+
+# while op!=4:
+#     print('''
+#           1.- Niño (1-17) $1000
+#           2.- Adulto (18-64) $3000
+#           3.- Adulto mayor (65-∞) $1500
+#           4.- Salir
+#           ''')
+#     op=int(input("Ingrese la opcion que desea: "))
+#     match op:
+#         case 1:
+#             print("pagando precio niño")
+#             cantninos= 11
+#             while cantninos <0 or cantninos >10:
+#                 cantninos=int(input("Ingrese cuantos niños: "))
+#                 if cantninos <0 or cantninos >10:
+#                     print("ingrese un numero entre 0 y 10: ")
+#             cantPersonas+=cantninos
+#             total+=1000*cantninos
+#         case 2:
+#             print("pagando precio adulto")
+#             cantadult= 11
+#             while cantadult <0 or cantadult >10:
+#                 cantadult=int(input("Ingrese cuantos adultos: "))
+#                 if cantadult <0 or cantadult >10:
+#                     print("ingrese un numero entre 0 y 10: ")
+#             cantPersonas+=cantadult
+#             total+=3000*cantadult
+#         case 3:
+#             print("pagando precio adulto mayor")
+#             cantadultm= 11
+#             while cantadultm <0 or cantadultm >10:
+#                 cantadultm=int(input("Ingrese cuantos niños: "))
+#                 if cantadultm <0 or cantadultm >10:
+#                     print("ingrese un numero entre 0 y 10: ")
+#             cantPersonas+=cantadultm
+#             total+=1500*cantadultm
+#         case 4:
+#             print("Saliendo del sistema")
+#             print(f"el total a pagar es {total}")
+#             print(f"el total de personas es {cantPersonas}")
+#         case _:
+#             print("Opcion invalida")
     
+print("Bienvenido al portal de compra")
+entradanum=0
+while entradanum <7000 or entradanum >21000:
+    entradanum=int(input("Ingrese el numero de su codigo promocional: "))
+    if entradanum <7000 or entradanum >21000:
+        print("Codigo invalido, intente nuevamente: ")
+EntradaTipo=0
+while EntradaTipo <=0 or EntradaTipo >3:
+    EntradaTipo=int(input('''Ingrese tipo de entrada:
+                      1.- Vip
+                      2.- General
+                      3.- Tribuna'''))
+    if EntradaTipo <=0 or EntradaTipo >3:
+        print("Opcion ingresada invalida, intente nuevamente")
+match EntradaTipo:
+    case 1:
+        print(f"La entrada vip tiene un valor de {40000*1.8} iva incluido")
+    case 2:
+        print(f"La entrada general tiene un valor de {40000*1.4} iva incluido")
+    case 3:
+        print(f"La entrada tribuna tiene un valor de {40000*1.2} iva incluido")
+
+
+
+
+
+
+
+
