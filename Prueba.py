@@ -185,32 +185,16 @@
 #         case _:
 #             print("Opcion invalida")
     
-print("Bienvenido al portal de compra")
-entradanum=0
-while entradanum <7000 or entradanum >21000:
-    entradanum=int(input("Ingrese el numero de su codigo promocional: "))
-    if entradanum <7000 or entradanum >21000:
-        print("Codigo invalido, intente nuevamente: ")
-EntradaTipo=0
-while EntradaTipo <=0 or EntradaTipo >3:
-    EntradaTipo=int(input('''Ingrese tipo de entrada:
-                      1.- Vip
-                      2.- General
-                      3.- Tribuna'''))
-    if EntradaTipo <=0 or EntradaTipo >3:
-        print("Opcion ingresada invalida, intente nuevamente")
-match EntradaTipo:
-    case 1:
-        print(f"La entrada vip tiene un valor de {40000*1.8} iva incluido")
-    case 2:
-        print(f"La entrada general tiene un valor de {40000*1.4} iva incluido")
-    case 3:
-        print(f"La entrada tribuna tiene un valor de {40000*1.2} iva incluido")
-
-
-
-
-
-
+# CantPasajes = int(input("Cuantos pasajes desea comprar?: "))
+# total = 0
+# for i in range(CantPasajes):
+#     while True:
+#         try:
+#             total += int(input(f"Ingresa el valor del pasaje {i}: "))
+#             break
+#         except:
+#             print("Debe ingresar un numero entero: ")
+        
+# print(f"Su total es: {total}")
 
 
