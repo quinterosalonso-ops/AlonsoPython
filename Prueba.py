@@ -198,3 +198,118 @@
 # print(f"Su total es: {total}")
 
 
+'''
+Fabrica de enlatados
+Se necesita hacer el algoritomo de productos enlatados
+Se debe consultar el peso del producto( en gramos) ( solo valores positivos)
+El porcentaje de sodio en él ( solo valores entre 1 y 100)
+y si se va a vender nacional o internacionalmente
+Considerar los criterios en la siguiente tabla
+
+menos de 500 grs, lata normal
+501 hassta 1500 bgr, lata mediana
+1501 y mas , lata grande
+si el sodio es menos de 5%, lata queda igual
+si es entre 5% y 8% lata especial
+si tiene 9% o mas, lata acorazada
+a las latas internacionales, se le debbe pegar 
+in sticker de validacion sanitaria
+
+Ej:800, 7%, 2==> lata mediana espacial con sticker sanitario
+'''
+
+# while True:
+#     try:
+#         PesoDelProducto = int(input("Ingrese el peso del producto en gramos: "))
+#         if PesoDelProducto>=1:
+#             break
+#     except:
+#         pass
+
+# while True:
+#     try:
+#         PorcentajeDeSodio = int(input("Ingrese el porcentaje de sodio del producto: "))
+#         if PorcentajeDeSodio>=1 and PorcentajeDeSodio<=100:
+#             break
+#     except:
+#           pass
+
+# while True:
+#     try:
+#         TipoDeLata = input("Ingrese el tipo de lata Nacional/Internacional: ").capitalize()
+#         if TipoDeLata == "Nacional" or TipoDeLata == "Internacional":
+#             break
+#     except:
+#         pass
+
+# if PesoDelProducto<500:
+#     a="Lata normal"
+# elif PesoDelProducto<1500:
+#     a="Lata Mediana"
+# elif PesoDelProducto>1500:
+#     a="Lata Grande"
+
+# if PorcentajeDeSodio<5:
+#     b=""
+# elif PorcentajeDeSodio<=8:
+#     b="Especial"
+# elif PorcentajeDeSodio>=9:
+#     b="Acorazada"
+
+# c=""
+# if TipoDeLata == "Internacional":
+#     c="con sticker sanitario"
+
+# print(f"{a} {b} {c}")
+
+
+
+DineroGuardado=100000
+print('''Ingrese una opcion:
+      
+    1.- Consultar saldo
+    2.- Retirar dinero
+    3.- Depositar dinero
+    4.- Salir
+    ''')
+while True:
+    try:
+        op = int(input(""))
+        if op>=1 and op<=4:
+            break
+    except:
+        pass
+
+match op:
+    case 1:
+        print(f"Su saldo es de {DineroGuardado}")
+    case 2:
+        while True:
+            try:
+                RetirarDinero = int(input("Ingresar Monto a Retirar"))
+                if RetirarDinero%5000==0 and RetirarDinero>=5000:
+                    DineroGuardado-=RetirarDinero
+                    break
+            except:
+                pass
+        print(DineroGuardado)
+    case 3:
+        while True:
+            try:
+                IngresarDinero = int(input("Ingresar Monto a Depositar"))
+                if IngresarDinero%5000==0 and IngresarDinero>=5000:
+                    DineroGuardado-=IngresarDinero
+                    break
+            except:
+                pass
+            print(DineroGuardado)
+    case 4:
+        print("Muchas gracias por su visita")
+
+
+
+
+
+
+
+
